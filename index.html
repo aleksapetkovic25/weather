@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toggle.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css?ver=6.3.2' type='text/css' media='all' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Weather</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <!-- <div class="date" id="date"> 22.01.2024 TO DO</div> -->
+            <div class="searchContainer">
+                <input type="text" id="searchCity" class="searchCity" placeholder="Enter the city...">
+                <button onclick="searchWeather()" class="searchBtn">Search</button>
+            </div>
+            <div class="toggleBtns">
+                <input onchange="getData()" class="toggle speed" id="speedUnit" type="checkbox" />
+                <input onchange="getData()" class="toggle temp" id="tempUnit" type="checkbox" />
+            </div>
+        </div>
+        
+
+        <div class="container">
+            <div class="current_container">
+                <div class="current">
+                    <div class="temperature" id="current_temperature"></div>
+                    <div class="place" id="place"></div>
+                    <div class="more-info" id="current_more-info"></div>
+                </div>
+            </div>
+
+            <div class="hourly-daily_container">
+                <div class="hourly article">
+                    <p class="article_heading">Hourly</p>
+                    <div class="content swiper hourlySwipper">
+                        <div id="hourly-slider" class="swiper-wrapper">
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="daily article">
+                    <p class="article_heading">5-Day Forecast</p>
+                    <div id="daily_content" class="daily_content"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

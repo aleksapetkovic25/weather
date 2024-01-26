@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+body {
+    background-color: #3C5859;
+    color: #FDFEFC;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 100%;
+    background: url('./assets/bg.jpg') no-repeat center center / cover;
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+}
+
+
+.searchContainer{
+    display: flex;
+}
+
+.searchCity{
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fafafa;
+    width: 200px;
+    outline: none;
+}
+
+.searchCity::placeholder {
+    color: #fafafabb;
+}
+
+.searchCity:focus {
+    border: 2px solid #0995f8; 
+  }
+
+.searchBtn{
+    color: #fafafa;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #20a147;
+}
+
+.toggleBtns{
+    margin-top: 10px;
+}
+
+.container {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    padding-top: 30px;
+}
+
+.current_container {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.267);
+    width: 90%;
+    /* margin: 30px auto auto; */
+}
+
+.current .temperature {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.current .place {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.current .more-info {
+    margin-top: 10px;
+}
+
+
+
+.hourly-daily_container .article {
+    background-color: #b8b3b317;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.hourly-daily_container .article .article_heading{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.829);
+}
+
+.hourly-daily_container .article .content{
+    padding-top: 10px;
+    display: flex;
+}
+
+.swiper-slide{
+    text-align: center;
+}
+
+
+
+
+.daily-weather-item_container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.daily-weather-item_container .day-name{
+    width: 20%;
+}
+
+.daily-weather-item_container .more-info{
+    width: 50%;
+}
+
+.daily-weather-item_container img{
+    width: 50px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .wrapper{
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .current_container {
+        width: 50%;
+        border-top: none;
+        margin: 30px auto auto;
+    }
+
+    .current .temperature {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    
+    .current .place {
+        font-size: 1.8rem;
+    }
+
+    .hourly-daily_container{
+        width: 45%;
+    }
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .wrapper{
+        width: 1180px;
+        padding: 30px;
+    }
+}
